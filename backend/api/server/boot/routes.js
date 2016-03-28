@@ -1,0 +1,35 @@
+var fs = require('fs');
+var	_ = require('lodash');
+var logger = require('winston');
+
+var os = require('../modules/os')
+
+// setting object storage variable from vcap to acquire credentials
+var objs = null;
+if (process.env.VCAP_SERVICES) {
+  objs = JSON.parse(process.env.VCAP_SERVICES)['Object-Storage'][0];
+}
+else {
+  try {
+    var path = __dirname + '/../env.json';
+    fs.statSync(path);
+    process.env['VCAP_SERVICES'] = fs.readFileSync(path,'utf8');;
+    objs = JSON.parse(process.env.VCAP_SERVICES)['Object-Storage'][0];
+  }
+  catch (e) {
+    logger.error("Could not find VCAP_SERVICES environment variable or the env.json file.");
+    logger.error("If you are running from a local environment, make sure you run 'npm run local' first to get the VCAP_SERVICES variable from Bluemix.");
+    process.exit(1);
+  }
+}
+
+if (_.isNull(objs)) {
+  logger.error("Object Storage configuration is not valid.");
+  process.exit(1);
+}
+
+module.exports = function(app) {
+  var router = app.loopback.Router();
+  router.get('/api/Products/image/:container/:file', os(objs.credentials).getImage);
+  app.use(router);
+}

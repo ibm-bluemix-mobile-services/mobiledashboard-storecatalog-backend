@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Store Catalog Mobile Backend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="http://console.ng.bluemix.net/cache/33e-4016485332/imgs/favicon.png">
+    <link rel="stylesheet" href="css/main.min.css"/>
+  </head>
+
+  <body>
+    <header class="design-guide__header">
+      <div class="header__logo">
+        <a href="/" ><h3>IBM <span class="header__logo--bold">Bluemix</span> Mobile Services</h3></a>
+      </div> <!-- .header__logo -->
+    </header>
+
+    <div class="design-guide-homepage">
+      <div class="homepage__main">
+          <div class="homepage__main-title">
+            <h1><span class="bold">Bluemix</span></h1>
+            <h1>Store Catalog Mobile Backend</h1>
+          </div> <!-- .homepage__main-title -->
+          <div class="homepage__main-links">
+            <a href="https://github.ibm.com/jmeis/app-builder-commerce-server" target="_blank"><button class="btn--secondary" id="homepage__btn--blue">Get the Source Code</button></a>
+            <a href="/explorer/#!/Item" target="_blank"><button class="btn--secondary">View API Reference</button></a>
+          </div> <!-- .homepage__main-links -->
+          <div class="homepage__main-version">
+            <h5>Current Release: <a href="https://github.ibm.com/jmeis/app-builder-commerce-server" target="_blank">0.1.0 (Beta)</a></h5>
+          </div> <!-- .homepage__main-version -->
+          <div class="homepage__main-down">
+            <h2>Explore this Sample</h2>
+            <a href="#about" class="arrow"><img src="../img/down-arrow.svg" alt="arrow"></a>
+          </div> <!-- .homepage__main-down -->
+      </div> <!-- .homepage__main -->
+
+      <div class="design-guide-base-elements">
+        <div class="base-elements__header" id="banner"></div>
+        <div class="base-elements__container">
+          <div class="base-elements__element">
+            <div class="base-elements-group" id="about">
+              <h1 class="base-elements-group__heading">About this Sample</h1>
+              <img src=img/splash.png />
+              <p class="base-elements-group__description">
+                The Store Catalog sample is comprised of a Bluemix backend (you're here!) and iOS application that serve to demonstrate a common
+                and reusable design pattern the uses new technology from IBM's Bluemix portfolio.
+              </p>
+              <p class="base-elements-group__description">
+                The title screen of the iOS application is called Store Catalog. This mobile application allows users to browse,
+                filter by category, and see the price, rating, description, etc. of each article of clothing that is available from the store.
+              </p>
+              <p class="base-elements-group__description">
+                The iOS application utilizes a MVC software architectural pattern and connects to our Bluemix backend to retrieve and filter any piece of data
+                it needs by using the API Connect, Cloudant, and Object Storage services that are provided by IBM.
+              </p>
+              <p class="base-elements-group__description">
+                The following sections explain what each of these services do, how they are implemented in this backend, and where to get more detailed information
+                about the services in the official documentation.
+              </p>
+              <br style="clear:both;"/>
+              <ul class="base-elements-group__base-elements">
+                <li id="primary" class="header__title">
+                  <div class="base-element">
+                    <div class="base-element__header">
+                      <div class="tile-image-container item__icon--catalog boilerplate style-scope d-tile">
+                        <img class="tile-image" src="https://new-console.ng.bluemix.net/rest/templates/arcstarter/cachedIcon/large/0" alt="This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.">
+                      </div>
+                      <h2 class="base-element__header--heading ibm-header-logo">API Connect</h2>
+                    </div>
+                    <div class="base-element__description">
+                      <p class="description__text">
+                        API Connect is a new IBM product. You can easily create REST APIs and connect them to your data, which makes the process of communicating with
+                        your data source simple.
+                        <br>
+                        <br>
+                        In this sample we use API Connect to connect to Cloudant. To view the API that we've created for this sample, click the **View API Reference**.
+                        <br>
+                        <br>
+                        The following example is the API Connect connector to our Cloudant database that is automatically generated when we deploy our application on Bluemix.
+                        It retrieves the Cloudant username and password that is bound to your application from the `VCAP_SERVICES` environment variable and generates the connector.
+                        If you are running this sample locally, you must type in the credentials manually.
+                      </p>
+                    </div>
+                    <div class="base-element__example-code">
+                      <div class="base-element__code">
+                        <ul class="base-element__code__tabs"> <!-- ul here in case we will add more tabs later -->
+                          <li class="current-lang"><a href="https://github.ibm.com/jmeis/app-builder-commerce-server/blob/master/backend/api/server/install/datasources.js" class="language-marker">datasources.json</a></li>
+                        </ul>
+                        <pre class="language-json snippet">
+                          <code class="language-json">
+                          "Cloudant": {
+                            "database": "products",
+                            "username": cloudant.credentials.username,
+                            "password": cloudant.credentials.password,
+                            "name": "Cloudant",
+                            "connector": "cloudant"
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="base-element__example">
+                        <a href="https://console.stage1.ng.bluemix.net/docs/services/apiconnect/index.html" target="_blank"><button class="btn">See Docs</button></a>
+                      </div>
+                    </div>
+                  </div> <!-- /primary -->
+                </li>
+                <li class="header__title" id="secondary">
+                  <div class="base-element">
+                    <div class="base-element__header">
+                      <div class="tile-image-container item__icon--catalog service style-scope d-tile">
+                        <img class="tile-image" src="https://new-console.ng.bluemix.net/resources/cache/e67-3118032828/build/14c83ad2-6fd4-439a-8c3a-d1a20f8a2381-featured.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
+                      </div>
+                      <h2 class="base-element__header--heading ibm-header-logo">Cloudant</h2>
+                    </div>
+                    <div class="base-element__description">
+                      <p class="description__text">
+                        The Cloudant NoSQL Database is a DBaaS service that is offered in the Bluemix Catalog. Cloudant offers 24x7 management, secure infrastructure,
+                        massive scalability, and high availability for your data.
+                        <br>
+                        <br>
+                        In this sample, we use a shell script to to generate a `products.json` file with every item in the Store Catalog, and subsequently,
+                        push that JSON document to Cloudant. The following example shows the data stored on Cloudant for a single product.
+                      </p>
+                    </div>
+                    <div class="base-element__example-code">
+                      <div class="base-element__code">
+                        <ul class="base-element__code__tabs"> <!-- ul here in case we will add more tabs later -->
+                          <li class="current-lang"><a href="https://github.ibm.com/jmeis/app-builder-commerce-server/tree/master/data/cloudant" class="language-marker" target="_blank">products.json</a></li>
+                        </ul>
+                        <pre class="language-json snippet">
+                          <code class="language-json">
+                          "Name":"Premium Cut Collar Shirt",
+                          "Description":"A classic shirt featuring a single chest pocket and button cuffs.",
+                          "Category":"Shirts",
+                          "Price":79.95,
+                          "Rating":"★★★☆☆",
+                          "Picture":"http://${NAME}.mybluemix.net/dam/${CONTAINER}/premium-cut-collar-shirt-pic-2.jpg",
+                          "Thumbnail":"http://${NAME}.mybluemix.net/dam/${CONTAINER}/premium-cut-collar-shirt-pic=2.jpg",
+                          "loopback__model__name":"Products"
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="base-element__example">
+                        <a href="https://console.ng.bluemix.net/docs/services/Cloudant/index.html#Cloudant" target="_blank"><button class="btn">See Docs</button></a>
+                      </div>
+                    </div>
+                  </div> <!-- secondary -->
+                </li>
+                <li id="floating" class="header__title">
+                <div class="base-element">
+                  <div class="base-element__header">
+                    <div class="tile-image-container item__icon--catalog service style-scope d-tile">
+                      <img class="tile-image" src="https://new-console.ng.bluemix.net/resources/cache/306-2671872480/build/6382b237-f88e-4ac6-a01c-ee6903c06d95-featured.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
+                    </div>
+                    <h2 class="base-element__header--heading ibm-header-logo">Object Storage</h2>
+                  </div>
+                  <div class="base-element__description">
+                    <p class="description__text">
+                      Object Storage provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability,
+                      and speed to market. Bluemix developers and users can access and store unstructured data content and can interactively compose and connect to
+                      applications and services.
+                      <br>
+                      <br>
+                      In our sample we use Object Storage to store the images of each product. After we create the service, we add a container that is called
+                      `commerce` and put the image of each product inside the container. We use this Bluemix backend as a proxy router in our code, which routes the
+                      image that is stored on the Object Storage container to the `/dam/:container/:downFile` endpoint on our Bluemix backend. If you noticed earlier,
+                      we store this as the `Picture` location for each product on Cloudant.
+                    </p>
+                  </div>
+                  <div class="base-element__example-code">
+                    <div class="base-element__code">
+                      <ul class="base-element__code__tabs"> <!-- ul here in case we will add more tabs later -->
+                        <li class="current-lang"><a href="https://github.ibm.com/jmeis/app-builder-commerce-server/blob/master/backend/api/server/modules/os.js" class="language-marker" target="_blank">server.js</a></li>
+                      </ul>
+                      <pre class="snippet">
+                        <code class="language-javascript">
+                        // creates a proxy server if the storage client successfully authenticates
+                        //
+                        // we are going to send up the endpoint /dam/:container/:downFile
+                        // to connect to our object storage on bluemix
+                        var proxyRouter = express.Router();
+                        app.use('/dam', proxyRouter);
+
+                        app.get('/dam/:container/:downFile', function(req, res) {
+                        // this is using the pkgcloud api
+                        //
+                        // we are piping the requested file from the requested
+                        // container into the response
+                        storageClient.download({
+                          container: req.params.container,
+                          remote: req.params.downFile
+                        }).pipe(res);
+                      });
+                      </code>
+                    </pre>
+                  </div>
+                  <div class="base-element__example">
+                    <a href="https://console.ng.bluemix.net/docs/services/ObjectStorage/index.html" target="_blank"><button class="btn">See Docs</button></a>
+                  </div>
+                </div> <!-- floating -->
+              </li>
+            </ul>
+          </div>
+        </div> <!-- base-elements container -->
+
+        <div class="components__sidebar" id="sidebar">
+          <div class="page-template__sidebar--nav">
+            <div class="nav-container">
+              <ul>
+                <li><a href="/explorer/#!/Item" target="_blank"><button class="btn--secondary" type="button">View the API Reference</button></a></li>
+                <li class="nav-container--item">
+                  <div class="tile-image-container item__icon--catalog boilerplate style-scope d-tile">
+                    <img class="tile-image" src="https://new-console.ng.bluemix.net/rest/templates/arcstarter/cachedIcon/large/0" alt="This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.">
+                  </div>
+                  <a href="#primary" id="primaryButton">API Connect</a>
+                </li>
+                <li class="nav-container--item">
+                  <div class="tile-image-container item__icon--catalog service style-scope d-tile">
+                    <img class="tile-image" src="https://new-console.ng.bluemix.net/resources/cache/e67-3118032828/build/14c83ad2-6fd4-439a-8c3a-d1a20f8a2381-featured.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
+                  </div>
+                  <a href="#secondary" id="secondaryButton">Cloudant</a>
+                </li>
+                <li class="nav-container--item">
+                  <div class="tile-image-container item__icon--catalog service style-scope d-tile">
+                    <img class="tile-image" src="https://new-console.ng.bluemix.net/resources/cache/306-2671872480/build/6382b237-f88e-4ac6-a01c-ee6903c06d95-featured.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
+                  </div>
+                  <a href="#floating" id="floatingButton">Object Storage</a>
+                </li>
+              </ul>
+
+              <div class="sidebar__logo">
+                <div class="header__logo">
+                  <a href="/" ><h3><span class="header__logo--bold">Bluemix</span><br> App Builder Commerce</h3></a>
+                </div> <!-- .header__logo -->
+              </div>
+
+            </div> <!-- .nav-container -->
+          </div> <!-- .page-temploate -->
+        </div> <!-- .components__sidebar -->
+      </div> <!-- .base-elements__container -->
+    </div> <!-- .design-guide-base-elements -->
+
+    <script src="/js/main.min.js"></script>
+
+  </body>
+</html>
