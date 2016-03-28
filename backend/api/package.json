@@ -20,6 +20,7 @@
     "lodash": "^4.6.1",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.1.0",
     "loopback-connector-cloudant": "^1.0.7",
     "loopback-datasource-juggler": "^2.39.0",
     "pkgcloud-bluemix-objectstorage": "^2.0.0",
