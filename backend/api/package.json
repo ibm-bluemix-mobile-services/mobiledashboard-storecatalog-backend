@@ -7,6 +7,7 @@
     "start": "node .",
     "local": "node server/install/local.js",
     "datasources": "node server/install/datasources.js",
+    "postinstall": "node server/install/datasources.js",
     "pretest": "jshint .",
     "posttest": "nsp check"
   },
@@ -19,7 +20,7 @@
     "lodash": "^4.6.1",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.6.5",
-    "loopback-connector-cloudant": "^1.0.10",
+    "loopback-connector-cloudant": "^1.0.7",
     "loopback-datasource-juggler": "^2.39.0",
     "pkgcloud-bluemix-objectstorage": "^2.0.0",
     "serve-favicon": "^2.0.1",

@@ -23,10 +23,15 @@ Ensure that you have:
     │   └── package.json        # Contains name, version, description, scripts, dependencies, etc. of the application
 
 ### Installation
-1. Run `npm install` to download all of the required dependencies.
-2. Ensure that you are logged and and in the correct region in Cloud Foundry.
-3. Run `npm run local` which will download your `VCAP_SERVICES` environment variable from Bluemix and will write it to the file `env.json` (This way we can have the Node application use `env.json` as an environment variable when we run our application locally. It stores the credentials necessary to authenticate to our Bluemix services).
-4. Run `npm run datasources` to connect your Cloudant datasource to API Connect (Note: You could also do this in the API Connect UI).
+1. Ensure that you are logged and and in the correct region in Cloud Foundry.
+2. Run `npm run local` which will download your `VCAP_SERVICES` environment variable from Bluemix and will write it to the file `env.json` (This way we can have the Node application use `env.json` as an environment variable when we run our application locally. It stores the credentials necessary to authenticate to our Bluemix services).
+3. Run `npm install` to download all of the required dependencies.
+4. Run `npm run datasources` to connect your Cloudant datasource to API Connect  
+       Note: The datasources.js file is also configured in the package.json to
+       run post install. This is so when the backend is pushed to Bluemix,
+       API Connect can successfully connect to Cloudant. It may be necessary to
+       modify this or rename the database parameter in the connector for your
+       own project (e.g. if your database isn't called "products").
 
 ### Running API Connect
 To run API Connect, type the following command while inside the [api/](https://github.ibm.com/jmeis/app-builder-commerce-server/tree/master/backend/api) directory:
