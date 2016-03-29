@@ -15,7 +15,7 @@ To provision a backend on Bluemix, perform the following steps:
 1. Make sure that you have an [IBM Bluemix](https://console.ng.bluemix.net/) account.
 2. Make sure that you have the [Cloud Foundry CLI](https://www.ng.bluemix.net/docs/cli/downloads.html) tool installed.
 3. Open terminal and run `cf --version` to verify that the `cf` tool is available.
-1. Setup the `cf` tool to work with a Bluemix API server of your choice. For example:
+4. Setup the `cf` tool to work with a Bluemix API server of your choice. For example:
 
 	`cf target https://api.ng.bluemix.net`
 
@@ -27,11 +27,11 @@ To provision a backend on Bluemix, perform the following steps:
 
 	> SYDNEY `https://api.au-syd.bluemix.net`
 
-1. Login with your Bluemix credentials and run `cf login` to pick your organization and space.
-1. Run `cf target` to ensure that you are in the right region, organization, and space.
+5. Login with your Bluemix credentials and run `cf login` to pick your organization and space.
+6. Run `cf target` to ensure that you are in the right region, organization, and space.
 
 #### Provision the backend
-1. Fill out the `TARGET`, `SPACE`, `REGION` and `NAME` variables in the `create.sh` shell script.
+1. Fill out the `TARGET`, `SPACE`, `REGION`, and `NAME` variables in the [`create.sh`](create.sh) shell script.
 2. Run `cf target` to easily find the correct values of the `TARGET`, `SPACE`, and `REGION` variables.
 
 	After running `cf target`...
