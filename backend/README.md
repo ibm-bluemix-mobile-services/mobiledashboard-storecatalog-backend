@@ -54,8 +54,8 @@ To publish your local application to Bluemix, use the command:
 
 This will use the `manifest.yml` file generated when we provisioned the application to upload the project on Bluemix.
 
-### Using the App Builder Commerce application and API
-You will see an App Builder Commerce web application when you visit the app route. You will be welcomed by a page that displays information about this sample.
+### Using the Store Catalog Backend and API
+You will see an Store Catalog Backend when you visit the app route. You will be welcomed by a page that displays information about this sample.
 
 <img src="readme/2.png"/>
 
