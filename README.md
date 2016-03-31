@@ -3,10 +3,10 @@ The Store Catalog Mobile Backend is a sample that demonstrates Mobile Services i
 
 This repository contains an example of a backend that would be created for a Store Catalog mobile application with the ability to browse the products and view the name, price, rating, description, image, etc. about each product that is available at a store.
 
-### Architecture Diagram
+### Architecture diagram
 <img src="readme/1.png"/>
 
-### Sample Flow
+### Sample flow
 The [provision/](provision) folder contains instructions on how to set up your application on Bluemix, the [data/](data) folder contains a simple shell script to push data to Cloudant in addition to instructions on how to set up Object Storage, and the [backend/](backend) folder contains the Store Catalog Mobile Backend running API Connect.
 
 1. Provision a Bluemix backend with the necessary services by running the [`create.sh`](provision/create.sh) script in the [provision/](provision) folder.
