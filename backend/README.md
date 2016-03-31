@@ -32,8 +32,9 @@ Ensure that you have:
    is also configured in the [`package.json`](api/package.json) to run
    post install. When the backend is pushed to Bluemix, the file runs so
    API Connect can successfully connect to Cloudant. It might be necessary 
-   to modify this file for your own project (e.g. if your database 
-   isn't called `products`).
+   to modify or remove this file for your own project (e.g. if your database 
+   isn't called `products`, or if you choose to generate the connector a 
+   different way).
 
 ### Running API Connect
 To run API Connect, type the following command while inside the [api/](api) directory:
