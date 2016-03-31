@@ -1,5 +1,5 @@
 # Store Catalog Mobile Backend Provisioning
-This folder provides instructions on how to easily create a Bluemix application with all of the necessary services for the App Builder Commerce Demo.
+This folder provides instructions on how to easily create a Bluemix application with all of the necessary services for the Store Catalog Backend.
 
 ### Before you begin
 Ensure that you have:
