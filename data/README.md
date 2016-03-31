@@ -4,7 +4,7 @@ The [cloudant/](cloudant) folder contains dynamic scripts that generate and uplo
 ### Before you begin
 Ensure that you have:
 
-* Provisioned your Bluemix application by following the instructions in the [provision/](../provision) folder.
+* Provisioned your Bluemix application by following the instructions in the [provision/](../provision) folder
 
 #### Uploading images to Object Storage
 The data in this folder contains a [clothes/](os/clothes) folder which contains the images that are used for this example. Since our project is now on Bluemix, we can upload these images to our Object Storage service instance.
