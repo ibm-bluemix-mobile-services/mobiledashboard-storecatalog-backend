@@ -26,7 +26,7 @@ Ensure that you have:
 1. Ensure that you are logged into the correct region in Cloud Foundry.
 2. Run `npm run local` which will download your `VCAP_SERVICES` environment variable from Bluemix and write it to the file named `env.json` (This way we can have the Node application use `env.json` as an environment variable when we run our application locally. It stores the credentials that are necessary to authenticate to our Bluemix services).
 3. Run `npm install` to download all of the required dependencies.
-4. Run `npm run datasources` to connect your Cloudant datasource to API Connect  
+4. Run `npm run datasources` to connect your Cloudant datasource to API Connect.  
 
            Note: The [`datasources.js`](api/server/install/datasources.js) file 
            is also configured in the [`package.json`](api/package.json) to run
