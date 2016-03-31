@@ -28,12 +28,12 @@ Ensure that you have:
 3. Run `npm install` to download all of the required dependencies.
 4. Run `npm run datasources` to connect your Cloudant datasource to API Connect.  
 
-           Note: The [`datasources.js`](api/server/install/datasources.js) file 
-           is also configured in the [`package.json`](api/package.json) to run
-           post install. When the backend is pushed to Bluemix, the file runs so
-           API Connect can successfully connect to Cloudant. It might be necessary 
-           to modify this file for your own project (e.g. if your database 
-           isn't called "products").
+   **Note:** The [`datasources.js`](api/server/install/datasources.js) file 
+   is also configured in the [`package.json`](api/package.json) to run
+   post install. When the backend is pushed to Bluemix, the file runs so
+   API Connect can successfully connect to Cloudant. It might be necessary 
+   to modify this file for your own project (e.g. if your database 
+   isn't called "products").
 
 ### Running API Connect
 To run API Connect, type the following command while inside the [api/](api) directory:
@@ -46,7 +46,7 @@ Browse through the tabs to familiarize yourself with the sample.
 
 Click the **Run** tab in the top right hand corner to start the server. After the server is started, click the **Explore** tab to see and test the API.
 
-    Note: The Object Store proxy router will not render images until you publish your application to Bluemix.
+**Note:** The Object Store proxy router will not render images until you publish your application to Bluemix.
 
 ### Publishing to Bluemix
 To publish your local application to Bluemix, use the command:
