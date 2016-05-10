@@ -1,0 +1,30 @@
+{
+	"app": {
+		"name": "Store Catalog Mobile Backend for Bluemix",
+		"description": "The Store Catalog Mobile Backend is a template that demonstrates Mobile Services integration with API Connect, \nCloudant NoSQL DB, and Object Storage services on Bluemix. The template exhibits common architectural design patterns \nthat developers can use to model their backend on Bluemix for mobile applications."
+	},
+	"runtime": {
+		"name": "Node.js",
+		"description": "API Connect with Loopback"
+	},
+	"services": [
+	{
+		"name": "Cloudant NoSQL Database",
+		"deployname": "cloudantdb",
+		"description": "Massively scalable, secure, and continuously operational database",
+		"type": "cloudantNoSQLDB",
+		"plan": "Shared",
+		"db": "products",
+		"data": "data/cloudant/products.json"
+	},
+	{
+		"name": "Object Storage",
+		"deployname": "objectstorage",
+		"description": "Unstructured cloud data store",
+		"type": "Object-Storage",
+		"plan": "Free",
+		"container": "clothes",
+		"data": "data/objectstorage/clothes/"
+	}
+	]
+}
