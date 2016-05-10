@@ -36,7 +36,7 @@ Ensure that you have:
 	`bluegen`
 
 2. Navigate to your newly created projects folder.
-3. Upload your API Connect backend to Bluemix by typing the command:
+3. Upload your API Connect backend to Bluemix by typing these commands:
     
 	`cf login [-a API_URL] [-u USERNAME] [-o ORG] [-s SPACE]`
 
