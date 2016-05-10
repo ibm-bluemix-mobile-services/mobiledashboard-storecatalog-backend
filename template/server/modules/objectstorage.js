@@ -5,8 +5,8 @@ module.exports = function(creds) {
 	// uses vcap credentials to authenticate
 	var config = {};
 	config.provider = "openstack";
-	config.authUrl = 'https://identity.open.softlayer.com/';
-	config.region= 'dallas';
+	config.authUrl = creds.auth_url;
+	config.region= creds.region;
 	config.useServiceCatalog = true;
 	// true for apps inside bluemix, otherwise false
 	config.useInternal = false;

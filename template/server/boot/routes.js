@@ -18,7 +18,7 @@ else {
 	}
 	catch (e) {
 		logger.error("Could not find VCAP_SERVICES environment variable or the env.json file.");
-		logger.error("If you are running from a local environment, make sure you run 'npm run local' first to get the VCAP_SERVICES variable from Bluemix.");
+		logger.error("If you are running from a local environment, you may need to update env.json with the current VCAP_SERVICES environment variable from Bluemix.");
 		process.exit(1);
 	}
 }
