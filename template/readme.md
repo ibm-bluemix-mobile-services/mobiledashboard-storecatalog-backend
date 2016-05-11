@@ -24,7 +24,7 @@ Ensure that you have:
     └── package.json        # Contains name, version, description, scripts, dependencies, etc. of the backend
 
 ### Running API Connect
-To run API Connect, type the following command while inside the [api/](api) directory:
+To run API Connect, type the following command while inside the project directory:
 
 `apic edit`
 
@@ -33,8 +33,6 @@ To run API Connect, type the following command while inside the [api/](api) dire
 Browse through the tabs to familiarize yourself with the template.
 
 Click the **Run** tab in the top right hand corner to start the server. After the server is started, click the **Explore** tab to see and test the API.
-
-**Note:** The Object Store proxy router will not render images until you publish your application to Bluemix.
 
 ### Publishing to Bluemix
 To publish your local application to Bluemix, use the command:
