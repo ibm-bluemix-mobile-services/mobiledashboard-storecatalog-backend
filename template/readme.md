@@ -39,7 +39,7 @@ To publish your local application to Bluemix, use the command:
 
 `cf push`
 
-This will use the `manifest.yml` file that was generated when we provisioned the application to upload the project on Bluemix.
+This will use the `manifest.yml` file that was generated when we provisioned the application to upload the project to Bluemix.
 
 ### Using the Store Catalog Backend and API
 You will see a Store Catalog Backend when you visit the application route. A landing page displays information about this template.
