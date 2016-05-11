@@ -13,7 +13,7 @@ The backend uses the following IBM Bluemix Services:
 
 ## Configuring the Backend
 
-The backend can be easily installed using the `bluegen` command line tool. This CLI tool logs you into Bluemix and prepares the backend services for use. It automatically provisions the services and populates them with the test data required to get up to speed quickly.
+The backend can be easily installed using the **bluegen** command line tool. This CLI tool logs you into Bluemix and prepares the backend services for use. It automatically provisions the services and populates them with the test data required to get up to speed quickly.
 
 ### Before you begin
 Ensure that you have:
