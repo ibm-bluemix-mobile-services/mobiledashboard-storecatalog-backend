@@ -1,5 +1,5 @@
 # Store Catalog Mobile Backend
-This folder contains instructions for how to run API Connect and deploy the template on Bluemix.
+This folder contains instructions for how to run API Connect and deploy the template to Bluemix.
 
 ### Before you begin
 Ensure that you have:
