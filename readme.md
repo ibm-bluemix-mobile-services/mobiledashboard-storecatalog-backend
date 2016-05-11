@@ -4,9 +4,9 @@ The Store Catalog Mobile Backend prepares a Bluemix backend using  **API Connect
 
 The backend uses the following IBM Bluemix Services:
 
-1. API Connect for a single point of REST integration
-2. Cloudant NoSQL DB to hold a list products in a NoSQL structure
-3. Object Storage to store product images
+1. **API Connect** for a single point of REST integration
+2. **Cloudant NoSQL DB** to hold a list products in a NoSQL structure
+3. **Object Storage** to store product images
 
 ### Architecture
 <img src="readme/1.png" alt="backend architecture" width="400px"/>
