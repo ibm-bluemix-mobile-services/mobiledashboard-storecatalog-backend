@@ -76,7 +76,7 @@
 				if(config.app.get('username', false)) {
 					loginCmd += app.text.green(' -u ') + app.text.yellow(config.app.get('username', false));
 				} else {
-					loginCmd += app.text.green(' -u USERNAME');
+					loginCmd += app.text.green(' -u [USERNAME]');
 				}
 
 				loginCmd += app.text.green(' -o ') +  app.text.yellow(config.app.get('org.name')) + app.text.green(' -s ') +  app.text.yellow(config.app.get('space.name'));
@@ -84,7 +84,7 @@
 				console.log(loginCmd);
 
 				console.log(app.text.green('    $ cf push\n'));
-				console.log('  Compose your API, run, manage, enforce, and deploy it with API Connect');
+				console.log('  Compose your API, run, manage, enforce, and deploy it with API Connect locally');
 				console.log(app.text.green('    $ npm install'));
 				console.log(app.text.green('    $ apic edit\n'));
 				console.log('  Reload data to Cloudant NoSQL DB and Object Storage');
