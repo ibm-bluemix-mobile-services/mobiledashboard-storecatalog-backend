@@ -76,7 +76,7 @@
 				if(config.app.get('username', false)) {
 					loginCmd += app.text.green(' -u ') + app.text.yellow(config.app.get('username', false));
 				} else {
-					loginCmd += app.text.green(' -u USERNAME');
+					loginCmd += app.text.green(' -u [USERNAME]');
 				}
 
 				loginCmd += app.text.green(' -o ') +  app.text.yellow(config.app.get('org.name')) + app.text.green(' -s ') +  app.text.yellow(config.app.get('space.name'));
