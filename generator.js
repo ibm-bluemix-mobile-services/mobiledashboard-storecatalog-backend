@@ -66,12 +66,23 @@
 				return saveFile(path + 'env.json', JSON.stringify(services));
 			}).then(function () {
 				console.log('Finished copying template\n');
-				console.log('Your project has been created at ' + app.text.yellow('projects/') + app.text.yellow(config.app.name) + '\n');
+				console.log('Your project has been created at ' + app.text.yellow('projects/') + app.text.yellow(config.app.get('name')) + '\n');
 				console.log('Next steps:\n');
 				console.log('  First, navigate to your project directory');
-				console.log(app.text.green('    $ cd ') + app.text.yellow('projects/') + app.text.yellow(config.app.name) + '\n');
+				console.log(app.text.green('    $ cd ') + app.text.yellow('projects/') + app.text.yellow(config.app.get('name')) + '\n');
 				console.log('  Upload your backend to Bluemix');
-				console.log(app.text.green('    $ cf login -a ') + app.text.yellow(config.app.region) + app.text.green(' -u ') + app.text.yellow(config.app.username) + app.text.green(' -o ') +  app.text.yellow(config.app.org.name) + app.text.green(' -s ') +  app.text.yellow(config.app.space.name));
+
+				var loginCmd = app.text.green('    $ cf login -a ') + app.text.yellow(config.app.get('region'));
+				if(config.app.get('username', false)) {
+					loginCmd += app.text.green(' -u ') + app.text.yellow(config.app.get('username', false));
+				} else {
+					loginCmd += app.text.green(' -u USERNAME');
+				}
+
+				loginCmd += app.text.green(' -o ') +  app.text.yellow(config.app.get('org.name')) + app.text.green(' -s ') +  app.text.yellow(config.app.get('space.name'));
+
+				console.log(loginCmd);
+
 				console.log(app.text.green('    $ cf push\n'));
 				console.log('  Compose your API, run, manage, enforce, and deploy it with API Connect');
 				console.log(app.text.green('    $ npm install'));
