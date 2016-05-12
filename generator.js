@@ -68,7 +68,7 @@
 				console.log('Finished copying template\n');
 				console.log('Your project has been created at ' + app.text.yellow('projects/') + app.text.yellow(config.app.name) + '\n');
 				console.log('Next steps:\n');
-				console.log('  Navigate to your project directory');
+				console.log('  First, navigate to your project directory');
 				console.log(app.text.green('    $ cd ') + app.text.yellow('projects/') + app.text.yellow(config.app.name) + '\n');
 				console.log('  Upload your backend to Bluemix');
 				console.log(app.text.green('    $ cf login -a ') + app.text.yellow(config.app.region) + app.text.green(' -u ') + app.text.yellow(config.app.username) + app.text.green(' -o ') +  app.text.yellow(config.app.org.name) + app.text.green(' -s ') +  app.text.yellow(config.app.space.name));
@@ -76,6 +76,8 @@
 				console.log('  Compose your API, run, manage, enforce, and deploy it with API Connect');
 				console.log(app.text.green('    $ npm install'));
 				console.log(app.text.green('    $ apic edit\n'));
+				console.log('  Reload data to Cloudant NoSQL DB and Object Storage');
+				console.log(app.text.green('    $ bluegen\n'));
 			}).catch(function (e) {
 				console.log('  ' + app.text.red.bold('error'), e);
 				resolve();
