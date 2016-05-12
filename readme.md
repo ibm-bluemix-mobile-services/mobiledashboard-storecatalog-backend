@@ -40,7 +40,7 @@ Ensure that you have:
 	`bluegen`
 
 3. Navigate to your newly created projects folder.
-4. Upload your API Connect backend to Bluemix by typing these commands:
+4. Upload your **API Connect** backend to Bluemix by typing these commands:
     
 	`cf login [-a API_URL] [-u USERNAME] [-o ORG] [-s SPACE]`
 
@@ -52,7 +52,9 @@ Ensure that you have:
 
 	`apic edit`
 
-
+6. Reload data to **Cloudant NoSQL DB** and **Object Storage** in your new project by running 
+	
+	`bluegen`
 
 ### License
 This package contains sample code provided in source code form. The samples are licensed under the Apache License, Version 2.0 (the "License"). You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and may also view the license in the license file within this package.
