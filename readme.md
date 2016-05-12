@@ -52,7 +52,7 @@ Ensure that you have:
 
 	`apic edit`
 
-6. Reload data to **Cloudant NoSQL DB** and **Object Storage** in your new project by running 
+6. Reload data to **Cloudant NoSQL DB** and **Object Storage** by running this command in your project directory:
 	
 	`bluegen`
 
