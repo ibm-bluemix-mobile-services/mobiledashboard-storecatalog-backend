@@ -23,9 +23,9 @@ Ensure that you have:
 * The [API Connect CLI tool](https://www.npmjs.com/package/apiconnect) installed by typing the command:
 
 	`npm install -g apiconnect`
-* The [Bluemix Generator CLI tool]() installed by typing the command:
+* The [Bluemix Generator CLI tool](https://www.npmjs.com/package/bluemix-generator) installed by typing the command:
 
-	`npm install -g bluegen`
+	`npm install -g bluemix-generator`
 
 
 ### Create your backend
