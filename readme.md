@@ -1,12 +1,12 @@
 # Mobile Backend for Bluemix
 [![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://new-console.ng.bluemix.net)
 ### IBM App Builder Store Catalog Backend
-The Store Catalog Mobile Backend prepares a Bluemix backend using  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the IBM Mobile App Builder Store Catalog Mobile Application template. It has the the ability to browse a list of products and also supports the viewing of product images for each item available at a store.
+The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of product images for each item in the product list.
 
 The backend uses the following IBM Bluemix Services:
 
-1. **API Connect** for a single point of REST integration
-2. **Cloudant NoSQL DB** to hold a list products in a NoSQL structure
+1. **API Connect** for a single point of REST integration using loopback with Node.js
+2. **Cloudant NoSQL DB** to hold a list products in a NoSQL database
 3. **Object Storage** to store product images
 
 ### Architecture
@@ -30,18 +30,22 @@ Ensure that you have:
 
 ### Create your backend
 
-1. Run the following command in the root directory of your cloned project. This will create the required services on Bluemix and populate them with the necessary test data:
+1. First, clone this project into your working directory:
+
+	`git clone https://github.com/ibm-bluemix-mobile-services/appbuilder-storecatalog-backend.git`
+
+2. Run the following command in the root directory of your cloned project. This will create the required services on Bluemix and populate them with the necessary test data:
 
 	`bluegen`
 
-2. Navigate to your newly created projects folder.
-3. Upload your API Connect backend to Bluemix by typing these commands:
+3. Navigate to your newly created projects folder.
+4. Upload your API Connect backend to Bluemix by typing these commands:
     
 	`cf login [-a API_URL] [-u USERNAME] [-o ORG] [-s SPACE]`
 
 	`cf push`
 
-4. If you want to configure or extend your backend you can edit the API configuration locally by running the commands:
+5. If you want to configure or extend your backend you can edit the API configuration locally by running the commands:
 
 	`npm install`
 
