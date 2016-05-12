@@ -26,8 +26,8 @@
 		app.events.on('validation', function (event, resolve, reject) {
 			exec('which apic', function (error, stdout) {
 				if (stdout.trim().length === 0) {
-					return reject('Please install the API Connect CLI.\n' +
-						'To install, type the command `npm install -g apiconnect` in your terminal.');
+					console.log(app.text.bold.yellow('[warning] ') + 'To run this sample locally, please install the API Connect CLI.\n'+
+						'To install, type the command `npm install -g apiconnect` in your terminal.\n');
 				}
 
 				resolve();
