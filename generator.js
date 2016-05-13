@@ -72,7 +72,7 @@
 				console.log(app.text.green('    $ cd ') + app.text.yellow('projects/') + app.text.yellow(config.app.get('name')) + '\n');
 				console.log('  Upload your backend to Bluemix');
 
-				var loginCmd = app.text.green('    $ cf login -a ') + app.text.yellow(config.app.get('region'));
+				var loginCmd = app.text.green('    $ cf login -a ') + app.text.yellow(config.app.get('region.api'));
 				if(config.app.get('username', false)) {
 					loginCmd += app.text.green(' -u ') + app.text.yellow(config.app.get('username', false));
 				} else {
