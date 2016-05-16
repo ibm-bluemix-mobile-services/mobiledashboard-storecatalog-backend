@@ -7,7 +7,7 @@ Ensure that you have:
 * The [Cloud Foundry CLI tool](https://github.com/cloudfoundry/cli) installed
 * The [API Connect CLI tool](https://www.npmjs.com/package/apiconnect) installed by typing the command:
 
-	`npm install -g apiconnect` 
+	`npm install -g apiconnect`
 
 ### Directory structure
     ├── client              # Contains the frontend files for the landing page for the backend route on Bluemix
@@ -17,6 +17,7 @@ Ensure that you have:
     ├── server              # Parent directory that contains all of the routing, loopback, modules, installation, etc. files
     │   ├── boot            # Contains routes.js which establishes our Object Storage proxy router
     │   ├── modules         # Contains our custom Object Storage module which authenticates to the service and pipes out a requested image
+    │   ├── utils           # Contains VCAP utility that returns credentials from the current environment (either env.json or Bluemix environment)
     │   ├── ...             # Misc.
     │   └── server.js       # The primary server file of the template
     ├── env.json            # Copy of the VCAP_SERVICES from Bluemix (allows the template to run locally)
@@ -28,7 +29,7 @@ To run API Connect, type the following command while inside the project director
 
 `apic edit`
 
-<img src="readme/1.png"/>
+<img src="readme/apiconnect.png"/>
 
 Browse through the tabs to familiarize yourself with the template.
 
@@ -44,6 +45,6 @@ This will use the `manifest.yml` file that was generated when we provisioned the
 ### Using the Store Catalog Backend and API
 You will see a Store Catalog Backend when you visit the application route. A landing page displays information about this template.
 
-<img src="readme/2.png"/>
+<img src="readme/landingpage.png"/>
 
 > Click **View API Reference** on the web UI to see the API specs.
