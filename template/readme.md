@@ -17,7 +17,7 @@ Ensure that you have:
     ├── server              # Parent directory that contains all of the routing, loopback, modules, installation, etc. files
     │   ├── boot            # Contains routes.js which establishes our Object Storage proxy router
     │   ├── modules         # Contains our custom Object Storage module which authenticates to the service and pipes out a requested image
-		│   ├── utils           # Contains VCAP utility that returns credentials from the current environment (either env.json or Bluemix environment)
+    │   ├── utils           # Contains VCAP utility that returns credentials from the current environment (either env.json or Bluemix environment)
     │   ├── ...             # Misc.
     │   └── server.js       # The primary server file of the template
     ├── env.json            # Copy of the VCAP_SERVICES from Bluemix (allows the template to run locally)

@@ -5,7 +5,7 @@
 ### IBM App Builder Store Catalog Backend
 The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the [new](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/) IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
 
-The backend uses the following IBM Bluemix Services:
+The backend uses the following IBM Bluemix services:
 
 1. **API Connect** for a single point of REST integration using Loopback with Node.js
 2. **Cloudant NoSQL DB** to hold a list products in a NoSQL database
