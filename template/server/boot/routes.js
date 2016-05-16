@@ -13,7 +13,7 @@
 
 var fs = require('fs')
 		logger = require('winston'),
-		objectstorage = require('../modules/objectstorage');
+		objectstorage = require('../modules/objectstorage'),
 		vcap = require('../utils/vcap')('Object-Storage');
 
 module.exports = function(app) {
