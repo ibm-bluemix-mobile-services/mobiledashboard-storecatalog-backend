@@ -11,35 +11,22 @@
  *  limitations under the License.
  */
 
-var packageName = require('./../package.json').name;
-var packageVersion = require('./../package.json').version;
-var packageDescription = require('./../package.json').description;
+var pkg = require('./../package.json'),
+		loopback = require('loopback'),
+		boot = require('loopback-boot'),
+		colors = require('colors'),
+		logger = require('winston');
 
-var loopback = require('loopback');
-var boot = require('loopback-boot');
-
-var colors = require('colors');
-var logger = require('winston');
-
-logger.info(" ____  _    _   _ _____ __  __ _____  __".cyan);
-logger.info("| __ )| |  | | | | ____|  \\/  |_ _\\ \\/ /".cyan);
-logger.info("|  _ \\| |  | | | |  _| | |\\/| || | \\  / ".cyan);
-logger.info("| |_) | |__| |_| | |___| |  | || | /  \\ ".cyan);
-logger.info("|____/|_____\\___/|_____|_|  |_|___/_/\\_\\".cyan);
-
-logger.info('');
-logger.info('*** ' + packageName + ' ***');
-logger.info('Version: '+ packageVersion +' (Beta)');
-logger.info('Description: ' + packageDescription);
-logger.info('');
+console.log(require('bluemix-logo'));
+logger.info('*** ' + pkg.name + ' ***');
+logger.info('Version: ' + colors.green(pkg.version));
+logger.info('Description: ' + pkg.description + '\n');
 
 var port = (process.env.VCAP_APP_PORT || 3000),
-	host = (process.env.VCAP_APP_HOST || 'localhost');
-
-var app = module.exports = loopback();
+		host = (process.env.VCAP_APP_HOST || 'localhost'),
+		app = module.exports = loopback();
 
 app.start = function () {
-	// start the web server
 	return app.listen(function () {
 		app.emit('started');
 
@@ -52,8 +39,8 @@ app.start = function () {
 	});
 };
 
-// Bootstrap the application, configure models, datasources and middleware.
-// Sub-apps like REST API are mounted via boot scripts.
+// bootstrap the application, configure models, datasources and middleware
+// sub-apps like REST API are mounted via boot scripts
 boot(app, __dirname, function (err) {
 	if (err) throw err;
 	if (require.main === module)

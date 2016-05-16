@@ -87,7 +87,7 @@
 				console.log('  Compose your API, run, manage, enforce, and deploy it with API Connect locally');
 				console.log(app.text.green('    $ npm install'));
 				console.log(app.text.green('    $ apic edit\n'));
-				console.log('  Reload data to Cloudant NoSQL DB and Object Storage');
+				console.log('  Redeploy data to Cloudant NoSQL DB and Object Storage');
 				console.log(app.text.green('    $ bluegen\n'));
 			}).catch(function (e) {
 				console.log('  ' + app.text.red.bold('error'), e);

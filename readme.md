@@ -1,9 +1,9 @@
 # Mobile Backend for Bluemix
-[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://new-console.ng.bluemix.net)
-[![](https://img.shields.io/badge/mobile-app%20builder-orange.svg)](https://console.ng.bluemix.net/catalog/services/mobile-app-builder/?cm_sp=bluemixblog-_-content-_-cta)
+[![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
+[![](https://img.shields.io/badge/mobile-app%20builder-orange.svg)](https://bluemix.net/catalog/services/mobile-app-builder/)
 
 ### IBM App Builder Store Catalog Backend
-The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the [new](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/) IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of product images for each item in the product list.
+The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the [new](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/) IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
 
 The backend uses the following IBM Bluemix Services:
 
@@ -12,7 +12,7 @@ The backend uses the following IBM Bluemix Services:
 3. **Object Storage** to store product images
 
 ### Architecture
-<img src="readme/1.png" alt="backend architecture" width="400px"/>
+<img src="readme/architecture.gif" alt="backend architecture" width="400px"/>
 
 ## Configuring the Backend
 
@@ -42,7 +42,7 @@ Ensure that you have:
 
 3. Navigate to your newly created projects folder.
 4. Upload your **API Connect** backend to Bluemix by typing these commands:
-    
+
 	`cf login [-a API_URL] [-u USERNAME] [-o ORG] [-s SPACE]`
 
 	`cf push`
@@ -54,7 +54,7 @@ Ensure that you have:
 	`apic edit`
 
 6. Reload data to **Cloudant NoSQL DB** and **Object Storage** by running this command in your project directory:
-	
+
 	`bluegen`
 
 ### License

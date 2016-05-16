@@ -309,12 +309,12 @@ definitions:
 swagger: '2.0'
 info:
   x-ibm-name: Products
-  version: 0.1.0
+  version: 1.0.0
   title: Products
   description: API
   contact:
     name: IBM Bluemix Mobile Services
-    url: 'http://ibm.com/mobilefirst'
+    url: 'http://www.ibm.com/cloud-computing/bluemix/'
   license:
     name: 'Apache License, Version 2.0'
     url: 'http://www.apache.org/licenses/LICENSE-2.0'

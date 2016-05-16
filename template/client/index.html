@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Store Catalog Mobile Backend</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-		<link rel="icon" type="image/png" href="../img/favicon.png">
+		<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 
@@ -28,7 +28,7 @@
 					</div> <!-- .homepage__main-links -->
 					<div class="homepage__main-down">
 						<h2>Explore this Template</h2>
-						<a href="#about" class="arrow"><img src="../img/down-arrow.svg" alt="arrow"></a>
+						<a href="#about" class="arrow"><img src="../img/assets/arrow.svg" alt="arrow"></a>
 					</div> <!-- .homepage__main-down -->
 			</div> <!-- .homepage__main -->
 
@@ -38,18 +38,18 @@
 					<div class="base-elements__element">
 						<div class="base-elements-group" id="about">
 							<h1 class="base-elements-group__heading">About this Template</h1>
-							<img src=img/splash.png />
+							<a href="https://bluemix.net/catalog/services/mobile-app-builder/" target="_blank"><img src=img/screenshots/mobile.png /></a>
 							<p class="base-elements-group__description">
 								The Store Catalog template is comprised of a Bluemix backend (you're here!) and iOS application that serve to demonstrate a common
 								and reusable design pattern using new technology from IBM's Bluemix portfolio.
 							</p>
 							<p class="base-elements-group__description">
-								The title screen of the iOS application is called Store Catalog. This mobile application allows users to browse,
-								filter by category, and see the price, rating, description, etc. of each article of clothing that is available from the store.
+								This backend has been created to support the new IBM Mobile App Builder Store Catalog template.
+								It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
 							</p>
 							<p class="base-elements-group__description">
-								The iOS application utilizes a MVC software architectural pattern and connects to our Bluemix backend to retrieve and filter any piece of data
-								it needs by using the API Connect, Cloudant, and Object Storage services that are provided by IBM.
+								The iOS application utilizes a MVC software architectural design pattern and connects to your Bluemix backend to retrieve and filter products
+								by using the API Connect, Cloudant NoSQL DB, and Object Storage services.
 							</p>
 							<p class="base-elements-group__description">
 								The following sections explain what each of these services do, how they are implemented in this backend, and where to get more detailed information
@@ -57,88 +57,88 @@
 							</p>
 							<br style="clear:both;"/>
 							<ul class="base-elements-group__base-elements">
-								<li id="primary" class="header__title">
+								<li class="header__title" id="primary">
 									<div class="base-element">
 										<div class="base-element__header">
 											<div class="tile-image-container item__icon--catalog boilerplate style-scope d-tile">
-												<img class="tile-image" src="../img/apic.svg" alt="This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.">
+												<img class="tile-image" src="../img/logos/apiconnect.svg" alt="This application is the StrongLoop Arc graphical UI, which includes tools for building, profiling and monitoring Node apps.">
 											</div>
 											<h2 class="base-element__header--heading ibm-header-logo">API Connect</h2>
-										</div>
+										</div> <!-- .base-element__header -->
 										<div class="base-element__description">
 											<p class="description__text">
 												IBM API Connect is a comprehensive end-to-end API lifecycle solution that enables the automated creation of APIs, simple discovery of systems of records,
 												self-service access for internal and third party developers and built-in security and governance. Using automated, model-driven tools, create new APIs and microservices
 												based on Node.js and Java runtimes—all managed from a single unified console.
 												<br>
-												<a href="../img/architecture.png" target="_blank"><img src="../img/architecture.png"></a>
+												<a href="../img/screenshots/apiconnect.png" target="_blank"><img src="../img/screenshots/apiconnect.png"></a>
 												<br>
-												In our template, we use API Connect to connect to our Cloudant datasource and expose an endpoint to our custom Object Storage module to get images of the clothing items.
-												API Connect gives us a unified communication platform for our mobile application.
+												In this backend, we use API Connect for a single point of REST integration for our Cloudant NoSQL DB datasource and images stored on Object Storage.
+												Click the <strong>View API Reference</strong> button to browse the API for the Store Catalog template.
 												<br>
 												<br>
-												Click the View API Reference button to browse the API we've constructed for the Store Catalog template. For more information about API Connect, see the official
+												For more information about API Connect, see the official
 												documentation below.
-											</p>
-										</div>
+											</p> <!-- .description__text -->
+										</div> <!-- .base-element__description -->
 										<div class="base-element__example-code">
 											<div class="base-element__example">
 												<a href="https://console.ng.bluemix.net/docs/services/apiconnect/index.html" target="_blank"><button class="btn">See Docs</button></a>
-											</div>
-										</div>
-									</div> <!-- /primary -->
-								</li>
+											</div> <!-- .base-element__example -->
+										</div> <!-- .base-element__example-code -->
+									</div> <!-- .base-element -->
+								</li> <!-- .header__title -->
 								<li class="header__title" id="secondary">
 									<div class="base-element">
 										<div class="base-element__header">
 											<div class="tile-image-container item__icon--catalog service style-scope d-tile">
-												<img class="tile-image" src="../img/cloudant.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
-											</div>
+												<img class="tile-image" src="../img/logos/cloudant.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
+											</div> <!-- .tile-image-container -->
 											<h2 class="base-element__header--heading ibm-header-logo">Cloudant NoSQL DB</h2>
-										</div>
+										</div> <!-- .base-element__header -->
 										<div class="base-element__description">
 											<p class="description__text">
 												Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB,
 												and accessible through a simple to use HTTP interface for mobile and web application models.
 												<br>
-												<a href="../img/products.png" target="_blank"><img src="../img/products.png"></a>
+												<a href="../img/screenshots/cloudant.png" target="_blank"><img src="../img/screenshots/cloudant.png"></a>
 												<br>
-												In this template, while running the <strong>bluegen</strong> tool, we provision a Cloudant NoSQL DB service instance and supply that with data from a
-												<strong>products.json</strong> file which contains the data from the Store Catalog.
+												In this backend, we provision a Cloudant NoSQL DB service instance and supply that with data from a
+												<strong>products.json</strong> file which contains a list of products for the Store Catalog.
 												<br>
 												<br>
 												If you open the Cloudant NoSQL DB service instance, you can browse the data inside the template. Each document contains information about the price,
-												rating, description, etc. of each article of clothing that is available from the store.
+												rating, description, etc. for each article of clothing that is available from the store.
 												<br>
 												<br>
 												For more information about Cloudant NoSQL DB, see the official documentation below.
-											</p>
-										</div>
+											</p> <!-- .description__text -->
+										</div> <!-- .base-element__description -->
 										<div class="base-element__example-code">
 											<div class="base-element__example">
 												<a href="https://console.ng.bluemix.net/docs/services/Cloudant/index.html#Cloudant" target="_blank"><button class="btn">See Docs</button></a>
-											</div>
-										</div>
-									</div> <!-- secondary -->
-								</li>
-								<li id="floating" class="header__title">
+											</div> <!-- .base-element__example -->
+										</div> <!-- .base-element__example-code -->
+									</div> <!-- .base-element -->
+								</li> <!-- .header__title -->
+								<li class="header__title" id="floating">
 									<div class="base-element">
 										<div class="base-element__header">
 											<div class="tile-image-container item__icon--catalog service style-scope d-tile">
-												<img class="tile-image" src="../img/objectstorage.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
-											</div>
+												<img class="tile-image" src="../img/logos/objectstorage.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
+											</div> <!-- .tile-image-container -->
 											<h2 class="base-element__header--heading ibm-header-logo">Object Storage</h2>
-										</div>
+										</div> <!-- .base-element__header -->
 										<div class="base-element__description">
 											<p class="description__text">
 												Object Storage provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.
 												Bluemix developers and users can access and store unstructured data content and can interactively compose and connect to applications and services.
 												The Object Storage service also provides programmatic access via API, SDKs and a consumable UI for object management.
 												<br>
-												<a href="../img/storecatalog.png" target="_blank"><img src="../img/storecatalog.png"></a>
+												<a href="../img/screenshots/objectstorage.png" target="_blank"><img src="../img/screenshots/objectstorage.png"></a>
 												<br>
-												In this template, while running the <strong>bluegen</strong> tool, we provision a Object Storage service instance and supply that with data from a
-												<strong>clothes</strong> folder which contains the data from the Store Catalog.
+												In this template, we provision a Object Storage service instance and supply that with data from a
+												<strong>clothes</strong> folder which contains the images for the Store Catalog.
 												<br>
 												<br>
 												If you open the Object Storage service instance, you can browse the data inside the template. The <strong>clothes</strong> container contains the images
@@ -146,38 +146,38 @@
 												<br>
 												<br>
 												For more information about Object Storage, see the official documentation below.
-											</p>
-										</div>
+											</p> <!-- .description__text -->
+										</div> <!-- .base-element__description -->
 										<div class="base-element__example">
 											<a href="https://console.ng.bluemix.net/docs/services/ObjectStorage/index.html" target="_blank"><button class="btn">See Docs</button></a>
-										</div>
-									</div> <!-- floating -->
-								</li>
-							</ul>
-						</div>
-					</div> <!-- base-elements container -->
+										</div> <!-- .base-element__example -->
+									</div> <!-- .base-element -->
+								</li> <!-- .header__title -->
+							</ul> <!-- .base-elements-group__base-elements-->
+						</div> <!-- .base-elements-group -->
+					</div> <!-- .base-elements__element -->
 
 					<div class="components__sidebar" id="sidebar">
 						<div class="page-template__sidebar--nav">
 							<div class="nav-container">
 								<ul>
 									<li><a href="/explorer/#!/Product" target="_blank"><button class="btn--secondary" type="button">View the API Reference</button></a></li>
-									<li class="nav-container--item">
+									<li>
 										<div class="tile-image-container item__icon--catalog boilerplate style-scope d-tile">
-											<img class="tile-image" src="../img/apic.svg" alt="This application is the API Connect graphical UI, which includes tools for building, profiling and monitoring Node apps.">
-										</div>
+											<img class="tile-image" src="../img/logos/apiconnect.svg" alt="This application is the API Connect graphical UI, which includes tools for building, profiling and monitoring Node apps.">
+										</div>  <!-- .tile-image-container -->
 										<a href="#primary" id="primaryButton">API Connect</a>
 									</li>
-									<li class="nav-container--item">
+									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
-											<img class="tile-image" src="../img/cloudant.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
-										</div>
+											<img class="tile-image" src="../img/logos/cloudant.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
+										</div> <!-- .tile-image-container -->
 										<a href="#secondary" id="secondaryButton">Cloudant NoSQL DB</a>
 									</li>
-									<li class="nav-container--item">
+									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
-											<img class="tile-image" src="../img/objectstorage.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
-										</div>
+											<img class="tile-image" src="../img/logos/objectstorage.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
+										</div> <!-- .tile-image-container -->
 										<a href="#floating" id="floatingButton">Object Storage</a>
 									</li>
 								</ul>
@@ -186,7 +186,7 @@
 									<div class="header__logo">
 										<a href="/" ><h3><span class="header__logo--bold">Bluemix</span><br> Store Catalog Mobile Backend</h3></a>
 									</div> <!-- .header__logo -->
-								</div>
+								</div> <!-- .sidebar__logo -->
 
 							</div> <!-- .nav-container -->
 						</div> <!-- .page-template -->
