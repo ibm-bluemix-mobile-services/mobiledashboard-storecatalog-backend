@@ -25,6 +25,27 @@
 		"plan": "Free",
 		"container": "clothes",
 		"data": "data/objectstorage/clothes/"
+	},
+	{
+		"name": "Mobile Client Access",
+		"deployname": "mca",
+		"description": "Ensure communications with back end systems are secure",
+		"type": "AdvancedMobileAccess",
+		"plan": "Bronze"
+	},
+	{
+		"name": "IBM Push Notifications",
+		"deployname": "push",
+		"description": "Engage Android and iOS mobile users by sending relevant content including interactive notifications",
+		"type": "imfpush",
+		"plan": "Basic"
+	},
+	{
+		"name": "Mobile Analytics",
+		"deployname": "mobileanalytics",
+		"description": "Gain valuable insight into how your app is performing and being used",
+		"type": "mobile-analytics_Prod",
+		"plan": "Lite"
 	}
 	]
 }
