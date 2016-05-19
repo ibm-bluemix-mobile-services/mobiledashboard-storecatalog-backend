@@ -34,25 +34,62 @@ window.onload = function(){
 			nav.style.top = header.clientHeight + "px";
 			nav.style.left = sidebar.offsetLeft + "px";
 		}
-		if (window.scrollY < apiConnect.offsetTop - 10) {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = ""
+		if (window.scrollY < first.offsetTop - 10) {
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = ""
 		}
-		else if (window.scrollY < cloudant.offsetTop - 10) {
-			document.getElementById('primaryButton').className = "selected-component"
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = ""
+		else if (window.scrollY < second.offsetTop - 10) {
+			document.getElementById('firstButton').className = "selected-component"
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = ""
+
 		}
-		else if (window.scrollY < objectStorage.offsetTop - 10) {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = "selected-component"
-			document.getElementById('floatingButton').className = ""
+		else if (window.scrollY < third.offsetTop - 10) {
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = "selected-component"
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = ""
+		}
+		else if (window.scrollY < fourth.offsetTop - 10) {
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = "selected-component"
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = ""
+		}
+		else if (window.scrollY < fifth.offsetTop - 10) {
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = "selected-component"
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = ""
+		}
+		else if (window.scrollY < sixth.offsetTop - 10) {
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = "selected-component"
+			document.getElementById('sixthButton').className = ""
 		}
 		else {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = "selected-component"
+			document.getElementById('firstButton').className = ""
+			document.getElementById('secondButton').className = ""
+			document.getElementById('thirdButton').className = ""
+			document.getElementById('fourthButton').className = ""
+			document.getElementById('fifthButton').className = ""
+			document.getElementById('sixthButton').className = "selected-component"
 		}
 	});
 
