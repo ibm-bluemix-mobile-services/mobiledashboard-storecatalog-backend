@@ -48,8 +48,8 @@
 								It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
 							</p>
 							<p class="base-elements-group__description">
-								The iOS application utilizes a MVC software architectural design pattern and connects to your Bluemix backend to retrieve and filter products
-								by using the API Connect, Cloudant NoSQL DB, and Object Storage services.
+								The iOS application uses a MVC software architectural design pattern and connects to your Bluemix backend to retrieve and filter products.
+								We use the API Connect as a single point of REST integration, and pull data from the Cloudant NoSQL DB, and Object Storage services.
 							</p>
 							<p class="base-elements-group__description">
 								The following sections explain what each of these services do, how they are implemented in this backend, and where to get more detailed information
@@ -191,7 +191,7 @@
 												<br>
 												<a href="../img/screenshots/push.png" target="_blank"><img src="../img/screenshots/push.png"></a>
 												<br>
-												For more information about IBM Push Notifications, see the official documentation below.
+												For more information about Push Notifications, see the official documentation below.
 											</p> <!-- .description__text -->
 										</div> <!-- .base-element__description -->
 										<div class="base-element__example">
@@ -237,7 +237,7 @@
 										<div class="tile-image-container item__icon--catalog boilerplate style-scope d-tile">
 											<img class="tile-image" src="../img/logos/apiconnect.svg" alt="This application is the API Connect graphical UI, which includes tools for building, profiling and monitoring Node apps.">
 										</div>  <!-- .tile-image-container -->
-										<a href="#first" id="firstButton">API Connect</a>
+										<a href="#first" class="buttons">API Connect</a>
 									</li>
 									<li>
 										<hr style="opacity:0.2; border-bottom:0px">
@@ -246,31 +246,31 @@
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
 											<img class="tile-image" src="../img/logos/cloudant.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
 										</div> <!-- .tile-image-container -->
-										<a href="#second" id="secondButton">Cloudant NoSQL DB</a>
+										<a href="#second" class="buttons">Cloudant NoSQL DB</a>
 									</li>
 									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
 											<img class="tile-image" src="../img/logos/objectstorage.svg" alt="Provides an unstructured cloud data store to build and deliver cloud applications and services with lowered cost, reliability, and speed to market.">
 										</div> <!-- .tile-image-container -->
-										<a href="#third" id="thirdButton">Object Storage</a>
+										<a href="#third" class="buttons">Object Storage</a>
 									</li>
 									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
 											<img class="tile-image" src="../img/logos/mca.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
 										</div> <!-- .tile-image-container -->
-										<a href="#fourth" id="fourthButton">Mobile Client Access</a>
+										<a href="#fourth" class="buttons">Mobile Client Access</a>
 									</li>
 									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
 											<img class="tile-image" src="../img/logos/push.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
 										</div> <!-- .tile-image-container -->
-										<a href="#fifth" id="fifthButton">Push Notifications</a>
+										<a href="#fifth" class="buttons">Push Notifications</a>
 									</li>
 									<li>
 										<div class="tile-image-container item__icon--catalog service style-scope d-tile">
 											<img class="tile-image" src="../img/logos/mobileanalytics.png" alt="Cloudant NoSQL DB provides access to a fully managed NoSQL JSON data layer that's always on. This service is compatible with CouchDB, and accessible through a simple to use HTTP interface for mobile and web application models">
 										</div> <!-- .tile-image-container -->
-										<a href="#sixth" id="sixthButton">Mobile Analytics</a>
+										<a href="#sixth" class="buttons">Mobile Analytics</a>
 									</li>
 								</ul>
 
@@ -287,6 +287,7 @@
 			</div> <!-- .design-guide-base-elements -->
 		</div> <!-- .design-guide-homepage -->
 
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="/js/main.min.js"></script>
 
 	</body>
