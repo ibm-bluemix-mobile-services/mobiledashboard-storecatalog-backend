@@ -1,12 +1,12 @@
 $(function() {
 
 	// arrow animation
-  $('.arrow').click(function() {
-      $('html, body').animate({
-        scrollTop: $('.base-elements__element').offset().top
-      }, 300);
-      return false;
-  });
+	$('.arrow').click(function() {
+			$('html, body').animate({
+				scrollTop: $('.base-elements__element').offset().top
+			}, 300);
+			return false;
+	});
 
 	$(window).scroll(function() {
 		var nav = $('.nav-container');
