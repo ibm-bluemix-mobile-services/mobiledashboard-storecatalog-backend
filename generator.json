@@ -34,7 +34,7 @@
 		"plan": "Bronze"
 	},
 	{
-		"name": "IBM Push Notifications",
+		"name": "Push Notifications",
 		"deployname": "push",
 		"description": "Engage Android and iOS mobile users by sending relevant content including interactive notifications",
 		"type": "imfpush",

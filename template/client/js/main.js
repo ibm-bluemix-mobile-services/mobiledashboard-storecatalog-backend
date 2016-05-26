@@ -9,17 +9,16 @@ $(function() {
 	});
 
 	$(window).scroll(function() {
-		var nav = $('.nav-container');
 
 		// keep sidebar active
 		if (window.scrollY < $('.base-elements__element').offset().top) {
-			nav.css({
+			$('.nav-container').css({
 				"position" : "absolute",
 				"left" : 0
 			});
 		}
 		else {
-			nav.css({
+			$('.nav-container').css({
 				"position" : "fixed",
 				"top" : $('.design-guide__header').height() + "px",
 				"left" : $('.components__sidebar').offset().left + "px"
