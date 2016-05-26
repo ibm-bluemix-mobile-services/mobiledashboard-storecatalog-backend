@@ -4904,3 +4904,12 @@ body {
 .snippet {
     max-width: 750px
 }
+
+#line {
+	max-width: 200px
+}
+
+hr {
+	opacity:0.2;
+	border-bottom:0px
+}

@@ -51,4 +51,6 @@ $(function() {
 			$('a.buttons:eq(5)').addClass("selected-component");
 		}
 	});
+
+	$(window).scroll();
 });
