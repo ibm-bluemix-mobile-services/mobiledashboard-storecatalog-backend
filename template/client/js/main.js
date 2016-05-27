@@ -26,23 +26,23 @@ $(function() {
 		}
 
 		// select buttons on scroll
-		if (window.scrollY < first.offsetTop - 10) {
+		if (window.scrollY < second.offsetTop - 10) {
 			$('.buttons:not(a.buttons:eq(0))').removeClass("selected-component");
 			$('a.buttons:eq(0)').addClass("selected-component");
 		}
-		else if (window.scrollY < second.offsetTop - 10) {
+		else if (window.scrollY < third.offsetTop - 10) {
 			$('.buttons:not(a.buttons:eq(1))').removeClass("selected-component");
 			$('a.buttons:eq(1)').addClass("selected-component");
 		}
-		else if (window.scrollY < third.offsetTop - 10) {
+		else if (window.scrollY < fourth.offsetTop - 10) {
 			$('.buttons:not(a.buttons:eq(2))').removeClass("selected-component");
 			$('a.buttons:eq(2)').addClass("selected-component");
 		}
-		else if (window.scrollY < fourth.offsetTop - 10) {
+		else if (window.scrollY < fifth.offsetTop - 10) {
 			$('.buttons:not(a.buttons:eq(3))').removeClass("selected-component");
 			$('a.buttons:eq(3)').addClass("selected-component");
 		}
-		else if (window.scrollY < fifth.offsetTop - 10) {
+		else if (window.scrollY < sixth.offsetTop - 10) {
 			$('.buttons:not(a.buttons:eq(4))').removeClass("selected-component");
 			$('a.buttons:eq(4)').addClass("selected-component");
 		}
