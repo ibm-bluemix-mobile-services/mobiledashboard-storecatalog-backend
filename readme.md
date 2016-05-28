@@ -12,7 +12,7 @@ The backend uses the following IBM Bluemix services:
 3. **Object Storage** to store product images
 4. **Mobile Client Access** for protecting resources using Facebook authentication
 5. **Push Notifications** for sending notifications to customers
-6. **Mobile Analytics** for monitoring trends and performance of application
+6. **Mobile Analytics** for monitoring trends and performance of the application
 
 ### Data Architecture
 <img src="readme/architecture.gif" alt="backend architecture" width="400px"/>
