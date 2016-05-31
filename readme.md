@@ -32,6 +32,7 @@ Ensure that you have:
 
 	`npm install -g bluemix-generator`
 
+> **Note:** Currently the **Object Storage** service is not available in the Sydney, so this template is not operable in that region
 
 ### Create your backend from this template
 
