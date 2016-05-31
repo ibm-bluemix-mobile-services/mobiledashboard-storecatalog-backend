@@ -31,7 +31,7 @@
 	{
 		"name": "Mobile Client Access",
 		"deployname": "mca",
-		"description": "Ensure communications with back end systems are secure",
+		"description": "Ensure communications with backend systems are secure",
 		"type": "AdvancedMobileAccess",
 		"plan": "Bronze"
 	},
