@@ -15,7 +15,8 @@
 		"type": "cloudantNoSQLDB",
 		"plan": "Shared",
 		"db": "products",
-		"data": "data/cloudant/products.json"
+		"data": "data/cloudant/products.json",
+		"redeploy": true
 	},
 	{
 		"name": "Object Storage",
@@ -24,7 +25,30 @@
 		"type": "Object-Storage",
 		"plan": "Free",
 		"container": "clothes",
-		"data": "data/objectstorage/clothes/"
+		"data": "data/objectstorage/clothes/",
+		"redeploy": true
+	},
+	{
+		"name": "Mobile Client Access",
+		"deployname": "mca",
+		"description": "Ensure communications with back end systems are secure",
+		"type": "AdvancedMobileAccess",
+		"plan": "Bronze"
+	},
+	{
+		"name": "Push Notifications",
+		"deployname": "push",
+		"description": "Engage Android and iOS mobile users by sending relevant content including interactive notifications",
+		"type": "imfpush",
+		"plan": "Basic"
+	},
+	{
+		"name": "Mobile Analytics",
+		"deployname": "mobileanalytics",
+		"description": "Gain valuable insight into how your app is performing and being used",
+		"type": "mobile-analytics_Prod",
+		"plan": "lite",
+		"bindable": false
 	}
 	]
 }

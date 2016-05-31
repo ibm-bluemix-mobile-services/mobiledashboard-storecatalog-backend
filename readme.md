@@ -2,16 +2,19 @@
 [![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
 [![](https://img.shields.io/badge/mobile-app%20builder-orange.svg)](https://bluemix.net/catalog/services/mobile-app-builder/)
 
-### IBM App Builder Store Catalog Backend
-The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, and **Object Storage** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the [new](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/) IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
+### IBM Mobile App Builder Store Catalog Backend
+The Store Catalog Mobile Backend uses the  **API Connect**, **Cloudant NoSQL DB**, **Object Storage**, **Mobile Client Access**, **Push Notifications**, and **Mobile Analytics** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the [new](https://developer.ibm.com/bluemix/2016/05/03/mobile-app-builder-now-available/) IBM Mobile App Builder Store Catalog template. It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
 
 The backend uses the following IBM Bluemix services:
 
 1. **API Connect** for a single point of REST integration using Loopback with Node.js
 2. **Cloudant NoSQL DB** to hold a list products in a NoSQL database
 3. **Object Storage** to store product images
+4. **Mobile Client Access** for protecting resources using Facebook authentication
+5. **Push Notifications** for sending notifications to customers
+6. **Mobile Analytics** for monitoring trends and performance of the application
 
-### Architecture
+### Data Architecture
 <img src="readme/architecture.gif" alt="backend architecture" width="400px"/>
 
 ## Configuring the Backend

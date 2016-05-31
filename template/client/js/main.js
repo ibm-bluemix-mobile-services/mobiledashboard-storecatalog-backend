@@ -1,65 +1,56 @@
-window.onload = function(){
+$(function() {
 
-	var target = document.querySelector('.base-elements__element'),
-			sidebar = document.querySelector('.components__sidebar'),
-			header = document.querySelector('.design-guide__header'),
-			apiConnect = document.querySelector('#primary'),
-			cloudant = document.querySelector('#secondary'),
-			objectStorage = document.querySelector('#floating'),
-			arrow = document.querySelector(".arrow"),
-			about = document.querySelector("#about");
-
-	function smooth(element, offset, speed) {
-		if (!(0 >= speed)) {
-			var rate = offset - element.scrollTop,
-					scroll = rate / speed * 10;
-			setTimeout(function() {
-				element.scrollTop = element.scrollTop + scroll, element.scrollTop !== offset && smooth(element, offset, speed - 10)
-			}, 7);
-		}
-	}
-
-	arrow.addEventListener("click", function(t) {
-		t.preventDefault(), smooth(document.body, about.offsetTop - 68, 400);
+	// arrow animation
+	$('.arrow').click(function() {
+			$('html, body').animate({
+				scrollTop: $('.base-elements__element').offset().top
+			}, 300);
+			return false;
 	});
 
-	window.addEventListener('scroll', function() {
-		var nav = document.querySelector(".nav-container");
-		if (window.scrollY < target.offsetTop) {
-			nav.style.position = "absolute"
-			nav.style.left = 0;
+	$(window).scroll(function() {
+
+		// keep sidebar active
+		if (window.scrollY < $('.base-elements__element').offset().top) {
+			$('.nav-container').css({
+				"position" : "absolute",
+				"left" : 0
+			});
 		}
 		else {
-			nav.style.position = "fixed";
-			nav.style.top = header.clientHeight + "px";
-			nav.style.left = sidebar.offsetLeft + "px";
+			$('.nav-container').css({
+				"position" : "fixed",
+				"top" : $('.design-guide__header').height() + "px",
+				"left" : $('.components__sidebar').offset().left + "px"
+			});
 		}
-		if (window.scrollY < apiConnect.offsetTop - 10) {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = ""
+
+		// select buttons on scroll
+		if (window.scrollY < second.offsetTop - 10) {
+			$('.buttons:not(a.buttons:eq(0))').removeClass("selected-component");
+			$('a.buttons:eq(0)').addClass("selected-component");
 		}
-		else if (window.scrollY < cloudant.offsetTop - 10) {
-			document.getElementById('primaryButton').className = "selected-component"
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = ""
+		else if (window.scrollY < third.offsetTop - 10) {
+			$('.buttons:not(a.buttons:eq(1))').removeClass("selected-component");
+			$('a.buttons:eq(1)').addClass("selected-component");
 		}
-		else if (window.scrollY < objectStorage.offsetTop - 10) {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = "selected-component"
-			document.getElementById('floatingButton').className = ""
+		else if (window.scrollY < fourth.offsetTop - 10) {
+			$('.buttons:not(a.buttons:eq(2))').removeClass("selected-component");
+			$('a.buttons:eq(2)').addClass("selected-component");
+		}
+		else if (window.scrollY < fifth.offsetTop - 10) {
+			$('.buttons:not(a.buttons:eq(3))').removeClass("selected-component");
+			$('a.buttons:eq(3)').addClass("selected-component");
+		}
+		else if (window.scrollY < sixth.offsetTop - 10) {
+			$('.buttons:not(a.buttons:eq(4))').removeClass("selected-component");
+			$('a.buttons:eq(4)').addClass("selected-component");
 		}
 		else {
-			document.getElementById('primaryButton').className = ""
-			document.getElementById('secondaryButton').className = ""
-			document.getElementById('floatingButton').className = "selected-component"
+			$('.buttons:not(a.buttons:eq(5))').removeClass("selected-component");
+			$('a.buttons:eq(5)').addClass("selected-component");
 		}
 	});
 
-	window.addEventListener('resize', function() {
-		window.dispatchEvent(new Event('scroll'));
-	})
-
-	window.dispatchEvent(new Event('scroll'));
-	window.dispatchEvent(new Event('resize'));
-}
+	$(window).scroll();
+});
