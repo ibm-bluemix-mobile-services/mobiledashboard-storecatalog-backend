@@ -1,7 +1,7 @@
 {
   "name": "Store-Catalog-Mobile-Backend",
   "version": "1.0.0",
-  "description": "Backend Mobile Services integration with API Connect, Cloudant NoSQL DB, and Object Storage",
+  "description": "Bluemix Mobile Services integration with API Connect, Cloudant NoSQL DB, and Object Storage",
   "main": "server/server.js",
   "scripts": {
     "start": "node ."
