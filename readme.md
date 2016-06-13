@@ -20,9 +20,6 @@ The backend uses the following IBM Bluemix services and runtime:
 ### Data architecture
 <img src="readme/data.gif" alt="backend architecture" width="400px"/>
 
-### Mobile Services architecture
-<img src="readme/mobileservices.gif" alt="mobile services architecture" width="400px"/>
-
 ## Configuring the Backend
 
 The backend can be easily installed using the **bluegen** command line tool. This CLI tool logs you into Bluemix and prepares the backend services for use. It automatically provisions the services and populates them with the test data required to get up to speed quickly.
