@@ -11,13 +11,25 @@
  *  limitations under the License.
  */
 
-var fs = require('fs')
-		logger = require('winston'),
-		objectstorage = require('../modules/objectstorage'),
-		vcap = require('../utils/vcap')('Object-Storage');
+var vcap_mca = require('../utils/vcap')('AdvancedMobileAccess'),
+		vcap_objectstorage = require('../utils/vcap')('Object-Storage'),
+		mca = require('../modules/mca'),
+		objectstorage = require('../modules/objectstorage');
 
 module.exports = function(app) {
 	var router = app.loopback.Router();
-	router.get('/api/Products/image/:container/:file', objectstorage(vcap.credentials).download);
+
+	// proxy for object storage service
+	router.get('/api/Products/image/:container/:file', function(req, res) {
+		objectstorage(vcap_objectstorage.credentials).download(req.params.container, req.params.file, function(download) {
+			download.pipe(res);
+		});
+	});
+
+	// protected endpoint only accessible after mobile app authenticates with mca service
+	router.get('/api/Products/protected', mca(app, vcap_mca.credentials), function(req, res) {
+		res.send("Hello, this is a protected resource of the mobile backend application!");
+	});
+
 	app.use(router);
 }
