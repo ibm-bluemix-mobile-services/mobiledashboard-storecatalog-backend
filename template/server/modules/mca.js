@@ -11,22 +11,17 @@
  *  limitations under the License.
  */
 
-module.exports = function(Product) {
-	Product.remoteMethod (
-		'image',
-		{
-			description : 'Returns the image stored in Object Storage.',
-			http: {path: '/image/:container/:file', verb: 'get'},
-			accepts: [{arg: 'container', type: 'string'}, {arg: 'file', type: 'string'}],
-			returns: [{arg: 'image', type: 'string'}],
-		}
-	);
-	Product.remoteMethod (
-		'protected',
-		{
-			description : 'Protected endpoint. Only accessible after authentication with MCA Service.',
-			http: {path: '/protected', verb: 'get'},
-			returns: [{arg: 'message', type: 'string'}],
-		}
-	);
+var passport = require('passport'),
+		MCAResourceStrategy = require('bms-mca-token-validation-strategy').MCAResourceStrategy;
+
+module.exports = function(app, creds) {
+	var options = {
+		appId: creds.clientId,
+		serverUrl: creds.serverUrl
+	}
+	
+	passport.use(new MCAResourceStrategy(options));
+	app.use(passport.initialize());
+
+	return passport.authenticate('mca-resource-strategy', {session: false});
 };

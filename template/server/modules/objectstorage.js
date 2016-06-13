@@ -28,17 +28,19 @@ module.exports = function(creds) {
 	};
 
 	return {
-		download: function(req, res) {
+		download: function(container, file, cbk) {
 			var client = pkgcloud.storage.createClient(config);
 			client.auth(function (error) {
-				if (error) {
+				if(error) {
 					console.error("Authorization error for storage client (pkgcloud): ", error);
 				}
 				else {
-					client.download({
-						container: req.params.container,
-						remote: req.params.file
-					}).pipe(res);
+					var request = client.download({
+						container: container,
+						remote: file
+					});
+					
+					cbk(request);
 				}
 			});
 		}
