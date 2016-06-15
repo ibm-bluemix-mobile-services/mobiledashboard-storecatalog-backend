@@ -15,7 +15,7 @@ Ensure that you have:
     │   ├── models          # Auto-generated model files from API Connect
     ├── definitions         # Auto-generated .yaml files from API Connect that contain API definitions
     ├── server              # Parent directory that contains all of the routing, loopback, modules, installation, etc. files
-    │   ├── boot            # Contains routes.js which establishes our Object Storage proxy router
+    │   ├── boot            # Contains routes.js which establishes our Object Storage proxy router and our protected Mobile Client Access endpoint
     │   ├── modules         # Contains custom modules for Mobile Client Access and Object Storage
     │   ├── utils           # Contains VCAP utility that returns credentials from the current environment (either env.json or Bluemix environment)
     │   ├── ...             # Misc.
