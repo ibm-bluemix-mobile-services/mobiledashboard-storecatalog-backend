@@ -7,31 +7,31 @@
 		"validateUpsert": true
 	},
 	"properties": {
-		"Name": {
+		"name": {
 			"type": "string",
 			"required": true
 		},
-		"Description": {
+		"description": {
 			"type": "string",
 			"required": true
 		},
-		"Rating": {
+		"rating": {
 			"type": "string",
 			"required": true
 		},
-		"Picture": {
+		"picture": {
 			"type": "string",
 			"required": true
 		},
-		"Thumbnail": {
+		"thumbnail": {
 			"type": "string",
 			"required": true
 		},
-		"Price": {
+		"price": {
 			"type": "number",
 			"required": true
 		},
-		"Category": {
+		"category": {
 			"type": "string",
 			"required": true
 		}
