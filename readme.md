@@ -13,7 +13,7 @@ The backend uses the following IBM Bluemix services and runtime:
 **Services**
 * **Cloudant NoSQL DB** to hold a list products in a NoSQL database
 * **Object Storage** to store product images
-* **Mobile Client Access** for protecting resources using Facebook authentication
+* **Mobile Client Access** for protecting resources using authentication
 * **Push Notifications** for sending notifications to customers
 * **Mobile Analytics** for monitoring trends and performance of the application
 
