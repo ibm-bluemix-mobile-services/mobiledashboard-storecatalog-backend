@@ -23,7 +23,6 @@
 		"deployname": "objectstorage",
 		"description": "Unstructured cloud data store",
 		"type": "Object-Storage",
-		"plan": "Free",
 		"container": "clothes",
 		"data": "data/objectstorage/clothes/",
 		"redeploy": true
