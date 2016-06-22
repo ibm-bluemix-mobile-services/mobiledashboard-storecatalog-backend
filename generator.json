@@ -14,8 +14,12 @@
 		"description": "Massively scalable, secure, and continuously operational database",
 		"type": "cloudantNoSQLDB",
 		"plan": "Shared",
-		"db": "products",
-		"data": "data/cloudant/products.json",
+		"data": [
+			{
+				"name": "products",
+				"path": "data/cloudant/products.json"
+			}
+		],
 		"redeploy": true
 	},
 	{
@@ -23,8 +27,12 @@
 		"deployname": "objectstorage",
 		"description": "Unstructured cloud data store",
 		"type": "Object-Storage",
-		"container": "clothes",
-		"data": "data/objectstorage/clothes/",
+		"data": [
+			{
+				"name": "clothes",
+				"path": "data/objectstorage/clothes/"
+			}
+		],
 		"redeploy": true
 	},
 	{
