@@ -49,7 +49,7 @@
 
 			saveFile(path + 'datasources.json', JSON.stringify({
 				'Cloudant': {
-					database: cloudantService.db,
+					database: cloudantService.data[0].name,
 					username: cloudantService.credentials.username,
 					password: cloudantService.credentials.password,
 					name: 'Cloudant',
@@ -73,7 +73,7 @@
 				console.log('  Upload your backend to Bluemix');
 
 				var loginCmd = app.text.green('    $ cf login -a ') + app.text.yellow(config.app.get('region.api'));
-				if(config.app.get('username', false)) {
+				if (config.app.get('username', false)) {
 					loginCmd += app.text.green(' -u ') + app.text.yellow(config.app.get('username', false));
 				} else {
 					loginCmd += app.text.green(' -u [USERNAME]');

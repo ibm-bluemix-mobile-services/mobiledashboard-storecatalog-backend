@@ -7,7 +7,7 @@ info:
     name: 'Apache License, Version 2.0'
     url: 'http://www.apache.org/licenses/LICENSE-2.0'
   contact:
-    name: IBM Bluemix Mobile Services
+    name: IBM Bluemix Mobile
     url: 'http://www.ibm.com/cloud-computing/bluemix/'
   description: "A Bluemix template application showcasing\_API Connect, Cloudant NoSQL DB, and Object Storage integration."
 apis:

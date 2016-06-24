@@ -320,7 +320,7 @@ info:
   title: Products
   description: API
   contact:
-    name: IBM Bluemix Mobile Services
+    name: IBM Bluemix Mobile
     url: 'http://www.ibm.com/cloud-computing/bluemix/'
   license:
     name: 'Apache License, Version 2.0'
