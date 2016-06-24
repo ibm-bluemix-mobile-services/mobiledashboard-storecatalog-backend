@@ -1,5 +1,5 @@
 # Store Catalog Mobile Backend
-This folder contains instructions for how to run API Connect and deploy the template to Bluemix.
+This folder contains instructions for how to run **API Connect** and deploy the template to Bluemix.
 
 ### Before you begin
 Ensure that you have:
@@ -25,7 +25,7 @@ Ensure that you have:
     └── package.json        # Contains name, version, description, scripts, dependencies, etc. of the backend
 
 ### Running API Connect
-To run API Connect, type the following command while inside the project directory:
+To run **API Connect**, type the following command while inside the project directory:
 
 `apic edit`
 
