@@ -1,6 +1,5 @@
 # Mobile Backend for Bluemix
 [![](https://img.shields.io/badge/bluemix-powered-blue.svg)](https://bluemix.net)
-[![](https://img.shields.io/badge/mobile-app%20builder-orange.svg)](https://bluemix.net/catalog/services/mobile-app-builder/)
 
 ### IBM Mobile Dashboard Store Catalog Backend
 The Store Catalog Mobile Backend uses an  **API Connect** Node.js runtime with the **Cloudant NoSQL DB**, **Object Storage**, **Mobile Client Access**, **Push Notifications**, and **Mobile Analytics** services on Bluemix. The template exhibits common architectural design patterns that developers can use to model their backend on Bluemix for mobile applications. This backend has been created to support the new IBM Mobile Dashboard Store Catalog template. It has the the ability to browse a list of products and supports the viewing of images for each item in the product list.
@@ -41,7 +40,7 @@ Ensure that you have:
 
 1. First, clone this project into your working directory:
 
-	`git clone https://github.com/ibm-bluemix-mobile-services/appbuilder-storecatalog-backend.git`
+	`git clone https://github.com/ibm-bluemix-mobile-services/mobiledashboard-storecatalog-backend.git`
 
 2. Run the following command in the root directory of your cloned project. This will create the required services on Bluemix and populate them with the necessary test data:
 
