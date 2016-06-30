@@ -54,8 +54,7 @@
 		"deployname": "mobileanalytics",
 		"description": "Gain valuable insight into how your app is performing and being used",
 		"type": "mobile-analytics_Prod",
-		"plan": "lite",
-		"bindable": false
+		"plan": "lite"
 	}
 	]
 }
