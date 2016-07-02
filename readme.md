@@ -53,11 +53,15 @@ Ensure that you have:
 
 	`cf push`
 
-5. If you want to configure or extend your backend you can edit the API configuration locally by running the commands:
+   After running `cf push`, you should be able to see the application running on the Bluemix dashboard. Visiting the application route will greet you with a landing page displaying more information about this template and the ability to explore the API.
+
+5. If you want to configure or extend your backend, you can edit the API configuration locally by running the commands:
 
 	`npm install`
 
 	`apic edit`
+	
+    Also, typing the command `npm start` will run the backend locally. (This won't allow you to edit the API configuration.)
 
 6. Redeploy data to **Cloudant NoSQL DB** and **Object Storage** by running this command in your project directory:
 
