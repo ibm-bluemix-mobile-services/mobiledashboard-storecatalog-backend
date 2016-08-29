@@ -30,7 +30,7 @@
 		"data": [
 			{
 				"name": "clothes",
-				"path": "data/objectstorage/clothes/"
+				"path": "data/object-storage/clothes/"
 			}
 		],
 		"redeploy": true
