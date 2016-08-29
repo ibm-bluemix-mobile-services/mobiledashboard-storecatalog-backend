@@ -4,7 +4,8 @@
   "description": "Bluemix Mobile Services integration with API Connect, Cloudant NoSQL DB, and Object Storage",
   "main": "server/server.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "mocha 'test/fvt/*.js'"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
     }
   ],
   "license": "Apache License, Version 2.0",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  },
   "dependencies": {
     "bluemix-logo": "^1.1.2",
     "bms-mca-token-validation-strategy": "^2.0.3",

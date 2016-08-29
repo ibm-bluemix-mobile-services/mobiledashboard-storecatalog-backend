@@ -12,16 +12,16 @@
  */
 
 var vcap_mca = require('../utils/vcap')('AdvancedMobileAccess'),
-		vcap_objectstorage = require('../utils/vcap')('Object-Storage'),
-		mca = require('../modules/mca'),
-		objectstorage = require('../modules/objectstorage');
+		vcap_os = require('../utils/vcap')('Object-Storage'),
+		mca = require('../modules/mobile-client-access'),
+		os = require('../modules/object-storage');
 
 module.exports = function(app) {
 	var router = app.loopback.Router();
 
 	// proxy for object storage service
 	router.get('/api/Products/image/:container/:file', function(req, res) {
-		objectstorage(vcap_objectstorage.credentials).download(req.params.container, req.params.file, function(download) {
+		os(vcap_os.credentials).download(req.params.container, req.params.file, function(download) {
 			download.pipe(res);
 		});
 	});
