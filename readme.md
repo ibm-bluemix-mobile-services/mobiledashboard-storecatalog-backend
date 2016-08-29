@@ -16,6 +16,8 @@ The backend uses the following Bluemix services and runtime:
 * **Push Notifications** for sending notifications to customers
 * **Mobile Analytics** for monitoring trends and performance of the application
 
+> **Note:** Currently the **Object Storage** service is not available in the Sydney, so this template is not operable in that region.
+
 ### Data architecture
 <img src="readme/data.gif" alt="backend architecture" width="400px"/>
 
@@ -34,7 +36,7 @@ Ensure that you have:
 
 	`npm install -g bluemix-generator`
 
-> **Note:** Currently the **Object Storage** service is not available in the Sydney, so this template is not operable in that region.
+> **Note:** If you have issues installing these packages globally, it is likely an issue with your permissions. See the [official npm instructions for how to fix permission issues](https://docs.npmjs.com/getting-started/fixing-npm-permissions) in their **Getting Started**.
 
 ### Create your backend from this template
 
