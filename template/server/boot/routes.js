@@ -11,10 +11,10 @@
  *  limitations under the License.
  */
 
-var vcap_mca = require('../utils/vcap')('AdvancedMobileAccess'),
-		vcap_os = require('../utils/vcap')('Object-Storage'),
-		mca = require('../modules/mobile-client-access'),
-		os = require('../modules/object-storage');
+var vcap_mca = require(__dirname + '/../utils/vcap')('AdvancedMobileAccess'),
+		vcap_os = require(__dirname + '/../utils/vcap')('Object-Storage'),
+		mca = require(__dirname + '/../modules/mobile-client-access'),
+		os = require(__dirname + '/../modules/object-storage');
 
 module.exports = function(app) {
 	var router = app.loopback.Router();
