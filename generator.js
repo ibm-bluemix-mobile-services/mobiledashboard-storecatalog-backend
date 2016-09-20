@@ -55,7 +55,7 @@
 					name: 'Cloudant',
 					connector: 'cloudant'
 				}
-			})).then(function () {
+			}, null, 2)).then(function () {
 				var services = {};
 
 				Object.keys(config.services).forEach(function (key) {
@@ -63,7 +63,7 @@
 					services[key].push(config.services[key]);
 				});
 
-				return saveFile(path + 'env.json', JSON.stringify(services));
+				return saveFile(path + 'env.json', JSON.stringify(services, null, 2));
 			}).then(function () {
 				console.log('Finished copying template\n');
 				console.log('Your project has been created at ' + app.text.yellow('projects/') + app.text.yellow(config.app.get('name')) + '\n');

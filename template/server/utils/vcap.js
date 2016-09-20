@@ -28,13 +28,11 @@ module.exports = function(service) {
 		catch (e) {
 			logger.error("Could not find VCAP_SERVICES environment variable or the env.json file.");
 			logger.error("If you are running from a local environment, you may need to update env.json with the current VCAP_SERVICES environment variable from Bluemix.");
-			process.exit(1);
 		}
 	}
 
 	if (vcap === null) {
 		logger.error(service + " configuration is not valid.");
-		process.exit(1);
 	}
 
 	return vcap;
