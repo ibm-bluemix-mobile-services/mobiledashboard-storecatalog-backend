@@ -29,4 +29,13 @@ module.exports = function(Product) {
 			returns: [{arg: 'message', type: 'string'}],
 		}
 	);
+	Product.remoteMethod (
+		'push',
+		{
+			description : 'Send a push notification to all the devices registered to your Push Notifications service instance.',
+			http: {path: '/push/:message', verb: 'get'},
+			accepts: [{arg: 'message', type: 'string'}],
+		}
+	);
+
 };

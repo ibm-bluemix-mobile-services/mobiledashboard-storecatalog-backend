@@ -12,8 +12,10 @@
  */
 
 var vcap_mca = require(__dirname + '/../utils/vcap')('AdvancedMobileAccess'),
+		vcap_push = require(__dirname + '/../utils/vcap')('imfpush'),
 		vcap_os = require(__dirname + '/../utils/vcap')('Object-Storage'),
 		mca = require(__dirname + '/../modules/mobile-client-access'),
+		push = require(__dirname + '/../modules/push-notifications'),
 		os = require(__dirname + '/../modules/object-storage');
 
 module.exports = function(app) {
@@ -29,6 +31,13 @@ module.exports = function(app) {
 	// protected endpoint only accessible after mobile app authenticates with mca service
 	router.get('/api/Products/protected', mca(app, vcap_mca.credentials), function(req, res) {
 		res.send("Hello, this is a protected resource of the mobile backend application!");
+	});
+
+	// sends a push notification to mobile devices registered to your service instance
+	router.get('/api/Products/push/:message', function(req, res) {
+		push(vcap_push.credentials).sendNotification(req.params.message, function(pushResponse) {
+			return res.send(pushResponse);
+		});
 	});
 
 	app.use(router);

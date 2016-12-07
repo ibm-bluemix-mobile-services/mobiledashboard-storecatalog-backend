@@ -12,12 +12,10 @@
  */
 
 (function (module) {
-
 	var fs = require('fs'),
 		exec = require('child_process').exec;
 
 	module.exports = function (app) {
-
 		var config = {
 			app: {},
 			services: {}
@@ -43,7 +41,6 @@
 		});
 
 		app.events.on('complete', function (event, resolve) {
-
 			var cloudantService = config.services['cloudantNoSQLDB'],
 				path = event.home + '/server/';
 
